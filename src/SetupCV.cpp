@@ -6,6 +6,12 @@
  * Original Author: Logan Power, 2017, for 2017(Zuko).
  */
 
+namespace jcv
+{
+int setupCV(int teamNumber, int streamPort = 1185)
+{
+	NetworkTable::SetClientMode();
 
-
+}
+}
 

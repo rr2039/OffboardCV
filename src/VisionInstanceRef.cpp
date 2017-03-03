@@ -7,14 +7,40 @@
 
 #include "VisionInstanceRef.h"
 
-namespace jcv {
+namespace jcv
+{
 
-VisionInstanceRef::VisionInstanceRef() {
-	// TODO Auto-generated constructor stub
+VisionInstanceRef::VisionInstanceRef()
+{
+	VisionInstanceRef::teamNumber = TEAMNUMBER;
+	VisionInstanceRef::streamPort = STREAMPORT;
 
 }
 
-VisionInstanceRef::~VisionInstanceRef() {
+int VisionInstanceRef::setTeamNumber(int newTeamNumber, bool justReturn = false)
+{
+	int oldNumber = VisionInstanceRef::teamNumber;
+	if (!justReturn)
+	{
+		VisionInstanceRef::teamNumber = newTeamNumber;
+	}
+	return oldNumber;
+
+}
+
+int VisionInstanceRef::setStreamPort(int newPort, bool justReturn = false)
+{
+	int oldPort = VisionInstanceRef::streamPort;
+	if (!justReturn)
+	{
+		VisionInstanceRef::streamPort = newPort;
+	}
+	return oldPort;
+
+}
+
+VisionInstanceRef::~VisionInstanceRef()
+{
 	// TODO Auto-generated destructor stub
 }
 
