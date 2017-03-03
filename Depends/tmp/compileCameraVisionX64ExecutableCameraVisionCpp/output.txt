@@ -1,0 +1,8 @@
+See file:///home/ubuntu/VisionBuildSamples/Cpp/build/tmp/compileCameraVisionX64ExecutableCameraVisionCpp/output.txt for all output for compileCameraVisionX64ExecutableCameraVisionCpp.
+compiling main.cpp failed.
+/home/ubuntu/VisionBuildSamples/Cpp/src/main.cpp: In function ‘int main()’:
+/home/ubuntu/VisionBuildSamples/Cpp/src/main.cpp:72:23: error: ‘camera’ was not declared in this scope
+   imageSink.SetSource(camera);
+                       ^
+
+Finished compileCameraVisionX64ExecutableCameraVisionCpp, see full log file:///home/ubuntu/VisionBuildSamples/Cpp/build/tmp/compileCameraVisionX64ExecutableCameraVisionCpp/output.txt.
