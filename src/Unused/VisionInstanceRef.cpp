@@ -10,12 +10,20 @@
 namespace jcv
 {
 
-VisionInstanceRef::VisionInstanceRef()
+#ifdef JCV_TEAM_NUMBER
+VisionInstanceRef::VisionInstanceRef(int team, int port)
 {
 	VisionInstanceRef::teamNumber = TEAMNUMBER;
 	VisionInstanceRef::streamPort = STREAMPORT;
 
 }
+#else
+VisionInstanceRef::VisionInstanceRef(int team, int port)
+{
+	VisionInstanceRef::teamNumber = team;
+	VisionInstanceRef::streamPort = port;
+}
+#endif /* JCV_TEAM_NUMBER */
 
 int VisionInstanceRef::setTeamNumber(int newTeamNumber, bool justReturn = false)
 {
@@ -37,11 +45,6 @@ int VisionInstanceRef::setStreamPort(int newPort, bool justReturn = false)
 	}
 	return oldPort;
 
-}
-
-VisionInstanceRef::~VisionInstanceRef()
-{
-	// TODO Auto-generated destructor stub
 }
 
 } /* namespace jcv */

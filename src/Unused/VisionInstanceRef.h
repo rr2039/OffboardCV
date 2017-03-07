@@ -30,19 +30,18 @@ class VisionInstanceRef
 {
 public:
 	// Methods
-	VisionInstanceRef();
+	VisionInstanceRef(int, int);
 	int setTeamNumber(int, bool);
 	int setStreamPort(int, bool);
-	virtual ~VisionInstanceRef();
 public:
 	// Public Attributes
-	cs::MjpegServer* inputStreamServer;
-	cs::MjpegServer* outputStreamServer;
-	cs::MjpegServer* procOutputStreamServer;
-	cs::UsbCamera* usbCamera;
-	cs::VideoSink* usbCameraSink;
-	cs::VideoSource* outputSource;
-	cs::VideoSource* procOutputSource;
+	cs::MjpegServer inputStreamServer;
+	cs::MjpegServer outputStreamServer;
+	cs::MjpegServer procOutputStreamServer;
+	cs::UsbCamera usbCamera;
+	cs::VideoSink usbCameraSink;
+	cs::VideoSource outputSource;
+	cs::VideoSource procOutputSource;
 protected:
 	// Protected Attributes
 	static int teamNumber;

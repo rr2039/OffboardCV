@@ -45,7 +45,7 @@
 #endif
 // These are unlikely to be included anywhere else, so I will not guard them (for now)
 #include "llvm/ArrayRef.h"
-#include "cscore.h"
+#include "cscore/cscore.h"
 
 // Forward Declarations:
 cs::UsbCamera SetUsbCamera(int cameraId, cs::MjpegServer& server);
